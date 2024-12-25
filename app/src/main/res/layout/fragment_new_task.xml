@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.newTask.NewTaskFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/lightblue">
+
+        <LinearLayout
+            android:paddingTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                tools:src="@drawable/notes" />
+
+            <TextView
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fill Your New Task Here!"
+                android:textAlignment="center"
+                android:textColor="@color/n"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:paddingBottom="10dp"/>
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/rounded_layout"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:paddingTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add The Task"
+                        android:textSize="20dp"
+                        android:textColor="@color/n"/>
+
+                    <TextView
+                        android:paddingTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Task Title"
+                        android:textSize="16dp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/task_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="49dp"
+                        android:drawableLeft="@drawable/baseline_title_24"
+                        android:hint="Task Title" />
+
+
+                    <TextView
+                        android:paddingTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Task Description"
+                        android:textSize="16dp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="49dp"
+                        android:drawableLeft="@drawable/baseline_description_24"
+                        android:hint="Task description"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:paddingTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Due To Date And Time"
+                        android:textSize="16dp"
+                        android:textColor="@color/black"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+
+                        android:orientation="horizontal">
+
+
+                        <EditText
+                            android:id="@+id/date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:minHeight="50dp"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:drawableLeft="@drawable/baseline_calendar_month_24"
+                            android:hint="Select Date"
+                            android:padding="12dp" />
+
+                        <EditText
+                            android:id="@+id/time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:minHeight="50dp"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:drawableLeft="@drawable/baseline_access_time_filled_24"
+                            android:hint="Select Time"
+                            android:padding="12dp" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:paddingTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Priority"
+                        android:textSize="16dp"
+                        android:textColor="@color/black"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:paddingEnd="16dp">
+
+                        <CheckBox
+                            android:id="@+id/high"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="High"
+                            android:textColor="#B71C1C"
+                            android:layout_marginEnd="12dp" />
+
+                        <CheckBox
+                            android:id="@+id/medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Medium"
+                            android:textColor="#FFA000"
+                            android:layout_marginEnd="12dp" />
+
+                        <CheckBox
+                            android:id="@+id/low"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Low"
+                            android:textColor="#388E3C" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:paddingTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Completion"
+                        android:textSize="16dp"
+                        android:textColor="@color/black"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingEnd="16dp">
+
+
+
+                        <CheckBox
+                            android:id="@+id/completed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Completed"
+                            android:textColor="#388E3C"
+                            android:layout_marginEnd="12dp" />
+
+                        <CheckBox
+                            android:id="@+id/not_completed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not Completed"
+                            android:textColor="#B71C1C" />
+                    </LinearLayout>
+                    <CheckBox
+                        android:id="@+id/reminder_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set Reminder"
+                        android:layout_marginTop="10dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:visibility="gone"
+                        android:id="@+id/date_time_container"
+                        android:orientation="horizontal">
+
+
+                        <EditText
+                            android:id="@+id/reminder_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:minHeight="50dp"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:drawableLeft="@drawable/baseline_calendar_month_24"
+                            android:hint="Reminder Date"
+                            android:padding="12dp" />
+
+                        <EditText
+                            android:id="@+id/reminder_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:minHeight="50dp"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:drawableLeft="@drawable/baseline_access_time_filled_24"
+                            android:hint="Reminder Time"
+                            android:padding="12dp" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/create"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_bng_design"
+                        android:text="Create"
+                        android:textColor="@android:color/white"
+                        android:layout_gravity="center" />
+
+
+
+
+                    <TextView
+                        android:id="@+id/test"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Or, Import your tasks from mocki, so it will be added to your tasks:"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/n"
+                        android:textSize="16dp"/>
+
+                    <Button
+                        android:id="@+id/importApi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_bng_design"
+                        android:layout_marginTop="20dp"
+                        android:text="Import API" />
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

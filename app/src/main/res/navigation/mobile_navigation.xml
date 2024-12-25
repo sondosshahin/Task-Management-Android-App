@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_today">
+
+    <fragment
+        android:id="@+id/nav_today"
+        android:name="com.example.CourseProject_1200166_1200711.ui.today.TodayFragment"
+        android:label="@string/today"
+        tools:layout="@layout/fragment_today" />
+
+    <fragment
+        android:id="@+id/nav_new_task"
+        android:name="com.example.CourseProject_1200166_1200711.ui.newTask.NewTaskFragment"
+        android:label="@string/new_task"
+        tools:layout="@layout/fragment_new_task" />
+
+    <fragment
+        android:id="@+id/nav_all"
+        android:name="com.example.CourseProject_1200166_1200711.ui.all.AllFragment"
+        android:label="@string/all"
+        tools:layout="@layout/fragment_all" />
+
+    <fragment
+        android:id="@+id/nav_completed"
+        android:name="com.example.CourseProject_1200166_1200711.ui.completed.CompletedFragment"
+        android:label="@string/completed"
+        tools:layout="@layout/fragment_completed" />
+
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.example.CourseProject_1200166_1200711.ui.search.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.CourseProject_1200166_1200711.ui.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.CourseProject_1200166_1200711.ui.logout.LogOutFragment"
+        android:label="@string/logout"
+        tools:layout="@layout/fragment_logout" />
+</navigation>
